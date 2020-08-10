@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 import os
 import sys
+from appscript import its, app
 from datetime import datetime, timedelta
-from appscript import *
-
 
 EMAIL = os.environ['ICAL_EMAIL']
+
 
 def get_events(email):
     the_cal = None
@@ -32,5 +32,5 @@ def mktemplate(events):
 
 
 if __name__ == '__main__':
-    evts = get_events(EMAIL)
-    print(mktemplate(evts))
+    events = get_events(EMAIL)
+    print(mktemplate(events))
