@@ -9,6 +9,7 @@ verify_ssl = true
 ipython = "*"
 requests = "*"
 icalevents = "*"
+appscript = "*"
 
 [requires]
 python_version = "3.8"

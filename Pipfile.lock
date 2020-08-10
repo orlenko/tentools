@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "79922bc0495ef2b7e4e52bc2d60affd3faf7cf796332927f3a5b09c445d505bd"
+            "sha256": "2adaf152e727a35e49d4d180d471e9b16320e6e77436ea5213631a4af88a41bb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,17 @@
             ],
             "markers": "sys_platform == 'darwin'",
             "version": "==0.1.0"
+        },
+        "appscript": {
+            "hashes": [
+                "sha256:18da093e20b0e73b7be95bbb0b0944c07c332c314e3db0a8799823e0d3496f54",
+                "sha256:6ebf85e59e7b4c7014a2cfc8465b15c8d0177f7dce9bd073e44e2bc211d15b47",
+                "sha256:8f634853ed3c9b823e3a8d5615fedade98d64d0a89443c2fa8f8d1f08a5e134e",
+                "sha256:acecd8d998da8eb29e9f4db61d0f699a7f68036029d6a67c2e484123fbe3ffe4",
+                "sha256:fb389bd3d5ff3ac7d9623a3fd6b7d7813ea1c616755c93828a1d69dbd407f5f3"
+            ],
+            "index": "pypi",
+            "version": "==1.1.1"
         },
         "backcall": {
             "hashes": [
