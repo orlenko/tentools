@@ -1,4 +1,4 @@
-# 10 Tools
+# 10 (not quite yet) Tools
 Little tools that automate some daily tasks
 
 ## dayskel.py: dayly notes skeleton generator
