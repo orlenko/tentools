@@ -10,7 +10,7 @@ EMAIL = os.environ['ICAL_EMAIL']
 def get_events(email):
     the_cal = None
     for c in app('iCal').calendars():
-        if c.name() == email:
+        if c.name() in email:
             the_cal = c
             break
     if not the_cal:
