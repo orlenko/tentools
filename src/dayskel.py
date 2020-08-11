@@ -8,23 +8,28 @@ EMAIL = os.environ['ICAL_EMAIL']
 
 
 def get_events(email):
-    the_cal = None
+    cals = []
+    skipped = set()
     for c in app('iCal').calendars():
         if c.name() in email:
-            the_cal = c
-            break
-    if not the_cal:
+            cals.append(c)
+        else:
+            skipped.add(c.name())
+    if not cals:
         return
     now = datetime.now()
     start = datetime(now.year, now.month, now.day)
     end = start + timedelta(1)
-    return the_cal.events[(its.start_date >= start).AND(its.start_date < end)]()
+    events = []
+    for cal in cals:
+        events.extend(cal.events[(its.start_date >= start).AND(its.start_date < end)]())
+    return sorted(events, key=lambda evt: evt.start_date())
 
 
 def mktemplate(events):
     now = datetime.now()
     parts = ['Day Notes for %s' % now.strftime('%b %d %Y')]
-    for evt in sorted(events, key=lambda evt: evt.start_date()):
+    for evt in events:
         start = evt.start_date()
         end = evt.end_date()
         parts.append('[%02d:%02d—%02d:%02d] %s' % (start.hour, start.minute, end.hour, end.minute, evt.summary()))
