@@ -28,11 +28,11 @@ def get_events(email):
 
 def mktemplate(events):
     now = datetime.now()
-    parts = ['Day Notes for %s' % now.strftime('%b %d %Y')]
+    parts = ['Day Notes for %s' % now.strftime('%A %b %d %Y')]
     for evt in events:
         start = evt.start_date()
         end = evt.end_date()
-        parts.append('[%02d:%02d—%02d:%02d] %s' % (start.hour, start.minute, end.hour, end.minute, evt.summary()))
+        parts.append('[%02d:%02d—%02d:%02d]\t%s' % (start.hour, start.minute, end.hour, end.minute, evt.summary()))
     return '\n'.join(parts)
 
 
