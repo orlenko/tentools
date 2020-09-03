@@ -8,8 +8,6 @@ verify_ssl = true
 [packages]
 ipython = "*"
 requests = "*"
-icalevents = "*"
-appscript = "*"
 pytest = "*"
 
 [requires]

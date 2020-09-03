@@ -36,4 +36,4 @@ def mktemplate(events):
 
 
 if __name__ == '__main__':
-    print(get_events(EMAIL))
+    print(mktemplate(get_events(EMAIL)))
