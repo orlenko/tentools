@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import os
-import sys
 from appscript import its, app
 from datetime import datetime, timedelta
 
@@ -37,5 +36,4 @@ def mktemplate(events):
 
 
 if __name__ == '__main__':
-    events = get_events(EMAIL)
-    print(mktemplate(events))
+    print(mktemplate(get_events(EMAIL)))
