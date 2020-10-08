@@ -41,7 +41,7 @@ class SpecialCommands:
     @classmethod
     def replace(cls, command):
         hour, minute = cls.parse_hh_mm(command)
-        new_line = command[len(':r [XX:XX] '):]
+        new_line = command[len(':r [XX:XX]'):]
         global entries
         new_entries = []
         for ts, line in entries:
@@ -53,7 +53,7 @@ class SpecialCommands:
     @classmethod
     def insert(cls, command):
         hour, minute = cls.parse_hh_mm(command)
-        new_line = command[len(':r [XX:XX] '):]
+        new_line = command[len(':i [XX:XX]'):]
         now = datetime.now()
         insertions = [(datetime(now.year, now.month, now.day, hour, minute), new_line)]
         global entries
