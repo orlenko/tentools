@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 requests = "==2.24.0"
 pytest = "==6.0.1"
+clipboard = "*"
 
 [requires]
 python_version = "3.8"
