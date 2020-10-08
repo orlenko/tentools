@@ -64,6 +64,8 @@ class SpecialCommands:
                 new_entries.extend(insertions)
                 insertions = []
             new_entries.append((ts, line))
+        if insertions:  # What if we did not find a suitable place? Then it's at the end!
+            new_entries.extend(insertions)
         entries = new_entries
 
     @classmethod
