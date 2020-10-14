@@ -69,8 +69,22 @@ class SpecialCommands:
         entries = new_entries
 
     @classmethod
+    def help(cls, command):
+        print('''Usage:
+        <any input> <Enter> — add a log entry with current timestamp
+        <Enter> without any input — print out today's log
+        == Commands: ==
+        :c  - clear all entries
+        :d [hh:mm] — delete entry at the specified timestamp
+        :r [hh:mm] <any input> — replace the entry at the specified timestamp
+        :i [hh:mm] <any input> — insert or backfill an entry 
+        \n''')
+
+    @classmethod
     def get_interpreter(cls, command):
         return {
+            ':h': cls.help,
+            ':?': cls.help,
             ':c': cls.clear,
             ':d': cls.delete,
             ':r': cls.replace,
